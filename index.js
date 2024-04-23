@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import inquirer from "inquirer";
+import chalk from "chalk";
 const answer = await inquirer.prompt([
     {
         type: "input",
@@ -39,4 +40,4 @@ switch (answer.ConversionType) {
 }
 console.log("Original words:", words);
 console.log(`${answer.ConversionType} words:`, convertedWords);
-console.log(`Your sentence word count is ${words.length}`);
+console.log(`Your sentence word count is ${chalk.red(words.length)}`);
